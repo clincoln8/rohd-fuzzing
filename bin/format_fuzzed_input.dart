@@ -14,11 +14,9 @@ List<List<int>> formatFuzzedInput(Interface intf, String fuzzedInput) {
   });
   int sumPortWidths = portWidths.sum;
 
-  // print('input length: ' + fuzzedInput.length.toString());
-
   if (fuzzedInput.length < sumPortWidths) return [];
 
-  for (int i = 0; i + sumPortWidths < fuzzedInput.length; i += sumPortWidths) {
+  for (int i = 0; i + sumPortWidths <= fuzzedInput.length; i += sumPortWidths) {
     List<int> seqItem = [];
     int j = 0;
     for (var portWidth in portWidths) {
