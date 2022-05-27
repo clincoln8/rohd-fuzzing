@@ -65,20 +65,6 @@ class Adder extends Module {
         c_c = Logic(),
         d_c = Logic();
 
-    // a <= in1[0] ^ in2[0];
-    // a_c <= in1[0] & in2[0];
-
-    // b <= (in1[1] ^ in2[1]) ^ a_c;
-
-    // b_c <= in1[1] & in2[1];
-
-    // c <= in1[2] ^ in2[2] ^ b_c;
-
-    // c_c <= in1[2] & in2[2];
-
-    // d <= in1[3] ^ in2[3] ^ c_c;
-    // d_c <= in1[3] & in2[3];
-
     a <= in1[0] + in2[0];
     a_c <= in1[0] & in2[0];
 
